@@ -1,0 +1,73 @@
+<!--
+  ~ Copyright (c) 2015-present, Parse, LLC.
+  ~ All rights reserved.
+  ~
+  ~ This source code is licensed under the BSD-style license found in the
+  ~ LICENSE file in the root directory of this source tree. An additional grant
+  ~ of patent rights can be found in the PATENTS file in the same directory.
+  -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/usernameEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/passwordEditText"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Enter Your Username..."
+        android:inputType="textCapSentences|textPersonName" />
+
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/signUpButton"
+        android:layout_alignLeft="@+id/usernameEditText"
+        android:layout_alignStart="@+id/usernameEditText"
+        android:layout_marginBottom="49dp"
+        android:ems="10"
+        android:hint="Enter Your Password..."
+        android:inputType="textPassword"
+        android:scaleX="1"
+        android:scaleY="1"
+        android:textScaleX="0.85" />
+
+    <Button
+        android:id="@+id/signUpButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="SignUpLogin"
+        android:text="Sign Up"
+        android:layout_above="@+id/toggleLoginModeTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="42dp" />
+
+    <TextView
+        android:id="@+id/toggleLoginModeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:clickable="true"
+        android:onClick="ToggleLoginMode"
+        android:text="Or, login"
+        android:textColor="@color/cast_libraries_material_featurehighlight_outer_highlight_default_color" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/usernameEditText"
+        app:srcCompat="@drawable/whatsapplogo" />
+</RelativeLayout>
